@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000
+const cors = require('cors')
+app.use(cors())
 
 const jokes = [
   "When I was a kid, my mother told me I could be anyone I wanted to be. Turns out, identity theft is a crime.",
