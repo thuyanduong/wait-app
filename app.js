@@ -16,7 +16,11 @@ const jokes = [
 ]
 
 app.get('/', (req, res) => {
-  res.send('Hello! Visit /joke for a random joke. Use query parameter ?wait to delay the response.')
+  res.send('<h1>Hello!</h1> <p>Visit /joke for a random joke.</p> <p>Use query parameter ?wait to delay the response.</p> <p>Visit /error for a 500 error.</p>')
+})
+
+app.get('/error', (req, res) => {
+  throw new Error("The server is down")
 })
 
 app.get('/joke', (req, res) => {
