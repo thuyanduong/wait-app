@@ -35,7 +35,7 @@ app.get('/joke', (req, res) => {
       currentDate = Date.now();
     } while (currentDate - date < parseInt(sec) * 1000);
   }
-  res.send(jokes[Math.floor(Math.random() * 10)])
+  res.send({"joke": jokes[Math.floor(Math.random() * 10)]})
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
